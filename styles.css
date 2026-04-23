@@ -54,7 +54,6 @@ body {
   height: 1080px;
   background-image: url("bravo.webp");
   pointer-events: none;
-  z-index: 1;
   opacity: 0.35;
   animation: none;
 }
