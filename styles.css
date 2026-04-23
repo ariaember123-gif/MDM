@@ -50,9 +50,8 @@ body {
 /* ── GRAIN TEXTURE ───────────────────────────────── */
 .grain {
   position: fixed;
-   z-index:-1;
-  width: 2000;
-  height: 2000;
+   width: 2000px;
+  height: 2000px;
   background-image: url("bravo.webp");
   pointer-events: none;
   z-index: 1;
