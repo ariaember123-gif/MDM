@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Daily Massage – Exclusive Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@200;300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Ambient background particles -->
+  <canvas id="particles"></canvas>
+
+  <!-- Grain overlay -->
+  <div class="grain"></div>
+
+  <!-- Top brand bar -->
+  <header class="brand-bar">
+    <div class="logo-wrap">
+      <img src="cropped_circle_image.png" alt="My Daily Massage Logo" class="logo" />
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="hero">
+    <div class="hero-inner">
+
+      <!-- Left decorative line -->
+      <div class="deco-line left"></div>
+
+      <div class="content-block">
+        <p class="eyebrow">✦ EXCLUSIVE EARLY ACCESS ✦</p>
+
+        <h1 class="headline">
+          Luxury Relaxation,<br/>
+          <em>Delivered Daily.</em>
+        </h1>
+
+        <p class="subhead">
+          Premium massage chairs crafted for your home sanctuary.<br/>
+          Join our VIP list and be first to experience the collection.
+        </p>
+
+        <!-- Trust badges -->
+        <div class="badges">
+          <span class="badge">🇺🇸 Free US Shipping</span>
+          <span class="badge">⭐ 5-Star Rated</span>
+          <span class="badge">🔒 Secure & Private</span>
+        </div>
+
+        <!-- Lead capture form -->
+        <form id="leadForm" class="lead-form" novalidate>
+
+          <div class="form-row">
+            <div class="field-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required autocomplete="given-name"/>
+              <span class="field-err" id="err-firstName"></span>
+            </div>
+            <div class="field-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required autocomplete="family-name"/>
+              <span class="field-err" id="err-lastName"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field-group full">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email"/>
+              <span class="field-err" id="err-email"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field-group full">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel"/>
+              <span class="field-err" id="err-phone"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field-group full">
+              <label for="zipCode">ZIP Code</label>
+              <input type="text" id="zipCode" name="zipCode" placeholder="90210" maxlength="5" autocomplete="postal-code"/>
+              <span class="field-err" id="err-zip"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field-group full">
+              <label for="interest">I'm Most Interested In</label>
+              <div class="select-wrap">
+                <select id="interest" name="interest">
+                  <option value="">Select an option…</option>
+                  <option value="full_body">Full Body Massage Chairs</option>
+                  <option value="neck_shoulder">Neck & Shoulder Relief</option>
+                  <option value="zero_gravity">Zero Gravity Models</option>
+                  <option value="budget">Budget-Friendly Options</option>
+                  <option value="gift">Buying as a Gift</option>
+                  <option value="other">Just Browsing</option>
+                </select>
+                <span class="select-arrow">▾</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="consent-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="consent" name="consent" required/>
+              <span class="check-custom"></span>
+              <span class="consent-text">
+                I agree to receive exclusive offers and updates from My Daily Massage.
+                No spam — unsubscribe anytime.
+              </span>
+            </label>
+            <span class="field-err" id="err-consent"></span>
+          </div>
+
+          <button type="submit" class="cta-btn" id="submitBtn">
+            <span class="btn-label">Unlock My VIP Access</span>
+            <span class="btn-icon">→</span>
+            <span class="btn-loader" id="btnLoader"></span>
+          </button>
+
+          <p class="form-privacy">🔒 Your information is safe. We never sell your data.</p>
+        </form>
+
+        <!-- Success state -->
+        <div class="success-state" id="successState">
+          <div class="success-icon">✦</div>
+          <h2 class="success-title">You're on the List!</h2>
+          <p class="success-msg">
+            Thank you for joining the My Daily Massage VIP family.<br/>
+            Check your inbox for an exclusive welcome offer.
+          </p>
+          <a href="https://mydailymassage.com" class="shop-btn">
+            Enter the Store →
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right decorative line -->
+      <div class="deco-line right"></div>
+
+    </div>
+  </main>
+
+  <!-- SOCIAL PROOF STRIP -->
+  <section class="proof-strip">
+    <div class="proof-inner">
+      <div class="proof-item">
+        <span class="proof-number">2,400+</span>
+        <span class="proof-label">Happy Customers</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-number">4.9 ★</span>
+        <span class="proof-label">Average Rating</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-number">Free</span>
+        <span class="proof-label">US Shipping Always</span>
+      </div>
+      <div class="proof-divider"></div>
+      <div class="proof-item">
+        <span class="proof-number">30-Day</span>
+        <span class="proof-label">Easy Returns</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 My Daily Massage. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <span>·</span>
+      <a href="#">Terms of Service</a>
+      <span>·</span>
+      <a href="#">Contact Us</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
